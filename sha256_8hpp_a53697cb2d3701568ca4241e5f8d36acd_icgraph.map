@@ -1,0 +1,6 @@
+<map id="sha256" name="sha256">
+<area shape="rect" id="node2" href="$classBlock.html#a19a2819b3b96f6184716dc40594a21fd" title="Block::_CalculateHash" alt="" coords="117,5,273,32"/>
+<area shape="rect" id="node3" href="$classBlock.html#a2fb51ce4e8059541e01efc96255baf01" title="Block::MineBlock" alt="" coords="321,5,445,32"/>
+<area shape="rect" id="node4" href="$classBlockchain.html#af74ed9f44071b56fdc09033ce5072719" title="Blockchain::AddBlock" alt="" coords="493,5,644,32"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="692,5,743,32"/>
+</map>

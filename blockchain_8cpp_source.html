@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>block_chain: blockchain.cpp 原始程式檔</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">block_chain
+   &#160;<span id="projectnumber">v1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 產生者: Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜尋');
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">blockchain.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="blockchain_8cpp.html">查看本檔案說明文件.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * blockchain.cpp</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *  Created on: 2019/7/30</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *      Author: j</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> */</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include&quot;<a class="code" href="blockchain_8hpp.html">blockchain.hpp</a>&quot;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classBlockchain.html#afb66c736ee870ebf75913d01a50f87a4">    9</a></span>&#160;<a class="code" href="classBlockchain.html#afb66c736ee870ebf75913d01a50f87a4">Blockchain::Blockchain</a> ( )</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="classBlockchain.html#ac1741e0e2bb28ab518e3dca7fbbe8e34">_vChain</a>.emplace_back ( <a class="code" href="classBlock.html">Block</a> ( 0 , <span class="stringliteral">&quot;Genesis Block&quot;</span> ) ) ;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="classBlockchain.html#afbf6b040faa35f411c1bf891efe2efa5">_nDifficulty</a> = 3 ;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div><div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classBlockchain.html#af74ed9f44071b56fdc09033ce5072719">   14</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classBlockchain.html#af74ed9f44071b56fdc09033ce5072719">Blockchain::AddBlock</a> ( <a class="code" href="classBlock.html">Block</a> bNew )</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    bNew.<a class="code" href="classBlock.html#a272751887cac6be21d1d991a6633059e">sPrevHash</a> = <a class="code" href="classBlockchain.html#a4ab51d072abc46e3ffadb8a336d3deda">_GetLastBlock</a> ( ).<a class="code" href="classBlock.html#ac0fc09c2c0060cd7b806dd2fc34d4977">GetHash</a> ( ) ;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    bNew.<a class="code" href="classBlock.html#a2fb51ce4e8059541e01efc96255baf01">MineBlock</a> ( <a class="code" href="classBlockchain.html#afbf6b040faa35f411c1bf891efe2efa5">_nDifficulty</a> ) ;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="classBlockchain.html#ac1741e0e2bb28ab518e3dca7fbbe8e34">_vChain</a>.push_back ( bNew ) ;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classBlockchain.html#a4ab51d072abc46e3ffadb8a336d3deda">   20</a></span>&#160;<a class="code" href="classBlock.html">Block</a> <a class="code" href="classBlockchain.html#a4ab51d072abc46e3ffadb8a336d3deda">Blockchain::_GetLastBlock</a> ( )<span class="keyword"> const</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword"></span>{</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classBlockchain.html#ac1741e0e2bb28ab518e3dca7fbbe8e34">_vChain</a>.back ( ) ;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div><div class="ttc" id="classBlock_html_a272751887cac6be21d1d991a6633059e"><div class="ttname"><a href="classBlock.html#a272751887cac6be21d1d991a6633059e">Block::sPrevHash</a></div><div class="ttdeci">string sPrevHash</div><div class="ttdef"><b>Definition:</b> <a href="block_8hpp_source.html#l00016">block.hpp:16</a></div></div>
+<div class="ttc" id="classBlockchain_html_ac1741e0e2bb28ab518e3dca7fbbe8e34"><div class="ttname"><a href="classBlockchain.html#ac1741e0e2bb28ab518e3dca7fbbe8e34">Blockchain::_vChain</a></div><div class="ttdeci">vector&lt; Block &gt; _vChain</div><div class="ttdef"><b>Definition:</b> <a href="blockchain_8hpp_source.html#l00023">blockchain.hpp:23</a></div></div>
+<div class="ttc" id="classBlockchain_html_af74ed9f44071b56fdc09033ce5072719"><div class="ttname"><a href="classBlockchain.html#af74ed9f44071b56fdc09033ce5072719">Blockchain::AddBlock</a></div><div class="ttdeci">void AddBlock(Block bNew)</div><div class="ttdef"><b>Definition:</b> <a href="blockchain_8cpp_source.html#l00014">blockchain.cpp:14</a></div></div>
+<div class="ttc" id="classBlock_html_ac0fc09c2c0060cd7b806dd2fc34d4977"><div class="ttname"><a href="classBlock.html#ac0fc09c2c0060cd7b806dd2fc34d4977">Block::GetHash</a></div><div class="ttdeci">string GetHash()</div><div class="ttdef"><b>Definition:</b> <a href="block_8cpp_source.html#l00015">block.cpp:15</a></div></div>
+<div class="ttc" id="classBlockchain_html_afbf6b040faa35f411c1bf891efe2efa5"><div class="ttname"><a href="classBlockchain.html#afbf6b040faa35f411c1bf891efe2efa5">Blockchain::_nDifficulty</a></div><div class="ttdeci">uint32_t _nDifficulty</div><div class="ttdef"><b>Definition:</b> <a href="blockchain_8hpp_source.html#l00022">blockchain.hpp:22</a></div></div>
+<div class="ttc" id="classBlock_html_a2fb51ce4e8059541e01efc96255baf01"><div class="ttname"><a href="classBlock.html#a2fb51ce4e8059541e01efc96255baf01">Block::MineBlock</a></div><div class="ttdeci">void MineBlock(uint32_t nDifficulty)</div><div class="ttdef"><b>Definition:</b> <a href="block_8cpp_source.html#l00019">block.cpp:19</a></div></div>
+<div class="ttc" id="classBlockchain_html_afb66c736ee870ebf75913d01a50f87a4"><div class="ttname"><a href="classBlockchain.html#afb66c736ee870ebf75913d01a50f87a4">Blockchain::Blockchain</a></div><div class="ttdeci">Blockchain()</div><div class="ttdef"><b>Definition:</b> <a href="blockchain_8cpp_source.html#l00009">blockchain.cpp:9</a></div></div>
+<div class="ttc" id="classBlockchain_html_a4ab51d072abc46e3ffadb8a336d3deda"><div class="ttname"><a href="classBlockchain.html#a4ab51d072abc46e3ffadb8a336d3deda">Blockchain::_GetLastBlock</a></div><div class="ttdeci">Block _GetLastBlock() const</div><div class="ttdef"><b>Definition:</b> <a href="blockchain_8cpp_source.html#l00020">blockchain.cpp:20</a></div></div>
+<div class="ttc" id="blockchain_8hpp_html"><div class="ttname"><a href="blockchain_8hpp.html">blockchain.hpp</a></div></div>
+<div class="ttc" id="classBlock_html"><div class="ttname"><a href="classBlock.html">Block</a></div><div class="ttdef"><b>Definition:</b> <a href="block_8hpp_source.html#l00013">block.hpp:13</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+產生者: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

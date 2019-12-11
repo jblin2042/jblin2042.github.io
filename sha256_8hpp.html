@@ -1,0 +1,461 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>block_chain: sha256.hpp 檔案參考文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">block_chain
+   &#160;<span id="projectnumber">v1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 產生者: Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜尋');
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">複合項目</a> &#124;
+<a href="#define-members">定義</a> &#124;
+<a href="#func-members">函式</a>  </div>
+  <div class="headertitle">
+<div class="title">sha256.hpp 檔案參考文件</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+sha256.hpp的包含相依圖:</div>
+<div class="dyncontent">
+<div class="center"><img src="sha256_8hpp__incl.png" border="0" usemap="#sha256_8hpp" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+本圖顯示出哪些檔案直接或間接include本檔 :</div>
+<div class="dyncontent">
+<div class="center"><img src="sha256_8hpp__dep__incl.png" border="0" usemap="#sha256_8hppdep" alt=""/></div>
+<map name="sha256_8hppdep" id="sha256_8hppdep">
+<area shape="rect" id="node2" href="block_8cpp.html" title="block.cpp" alt="" coords="5,80,84,107"/>
+<area shape="rect" id="node3" href="sha256_8cpp.html" title="sha256.cpp" alt="" coords="108,80,197,107"/>
+</map>
+</div>
+</div>
+<p><a href="sha256_8hpp_source.html">查看本檔案的原始碼.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+複合項目</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSHA256.html">SHA256</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+定義</h2></td></tr>
+<tr class="memitem:a0a0e7e0d135e9feff1da2e46fa556d50"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sha256_8hpp.html#a0a0e7e0d135e9feff1da2e46fa556d50">SHA2_SHFR</a>(x,  n)&#160;&#160;&#160;(x &gt;&gt; n)</td></tr>
+<tr class="separator:a0a0e7e0d135e9feff1da2e46fa556d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9509f7c1f927cb12f98d9995ae2f92d3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sha256_8hpp.html#a9509f7c1f927cb12f98d9995ae2f92d3">SHA2_ROTR</a>(x,  n)&#160;&#160;&#160;((x &gt;&gt; n) | (x &lt;&lt; ((sizeof(x) &lt;&lt; 3) - n)))</td></tr>
+<tr class="separator:a9509f7c1f927cb12f98d9995ae2f92d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fcefdff5f2609b2c5eb1d0f99214199"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sha256_8hpp.html#a0fcefdff5f2609b2c5eb1d0f99214199">SHA2_ROTL</a>(x,  n)&#160;&#160;&#160;((x &lt;&lt; n) | (x &gt;&gt; ((sizeof(x) &lt;&lt; 3) - n)))</td></tr>
+<tr class="separator:a0fcefdff5f2609b2c5eb1d0f99214199"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d4a72c3cb3d85b0c82736081042c1a4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sha256_8hpp.html#a1d4a72c3cb3d85b0c82736081042c1a4">SHA2_CH</a>(x,  y,  z)&#160;&#160;&#160;((x &amp; y) ^ (~x &amp; z))</td></tr>
+<tr class="separator:a1d4a72c3cb3d85b0c82736081042c1a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9222f6c22449097806fb1dac2a58107"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sha256_8hpp.html#ae9222f6c22449097806fb1dac2a58107">SHA2_MAJ</a>(x,  y,  z)&#160;&#160;&#160;((x &amp; y) ^ (x &amp; z) ^ (y &amp; z))</td></tr>
+<tr class="separator:ae9222f6c22449097806fb1dac2a58107"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ae1b70e2104958a43d1d8f32cb79eb6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sha256_8hpp.html#a0ae1b70e2104958a43d1d8f32cb79eb6">SHA256_F1</a>(x)&#160;&#160;&#160;(<a class="el" href="sha256_8hpp.html#a9509f7c1f927cb12f98d9995ae2f92d3">SHA2_ROTR</a>(x,  2) ^ <a class="el" href="sha256_8hpp.html#a9509f7c1f927cb12f98d9995ae2f92d3">SHA2_ROTR</a>(x, 13) ^ <a class="el" href="sha256_8hpp.html#a9509f7c1f927cb12f98d9995ae2f92d3">SHA2_ROTR</a>(x, 22))</td></tr>
+<tr class="separator:a0ae1b70e2104958a43d1d8f32cb79eb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc002a02aab7533fb0bfe557a25266e1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sha256_8hpp.html#afc002a02aab7533fb0bfe557a25266e1">SHA256_F2</a>(x)&#160;&#160;&#160;(<a class="el" href="sha256_8hpp.html#a9509f7c1f927cb12f98d9995ae2f92d3">SHA2_ROTR</a>(x,  6) ^ <a class="el" href="sha256_8hpp.html#a9509f7c1f927cb12f98d9995ae2f92d3">SHA2_ROTR</a>(x, 11) ^ <a class="el" href="sha256_8hpp.html#a9509f7c1f927cb12f98d9995ae2f92d3">SHA2_ROTR</a>(x, 25))</td></tr>
+<tr class="separator:afc002a02aab7533fb0bfe557a25266e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9435ee6ad07985796b91077d13eaf7a0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sha256_8hpp.html#a9435ee6ad07985796b91077d13eaf7a0">SHA256_F3</a>(x)&#160;&#160;&#160;(<a class="el" href="sha256_8hpp.html#a9509f7c1f927cb12f98d9995ae2f92d3">SHA2_ROTR</a>(x,  7) ^ <a class="el" href="sha256_8hpp.html#a9509f7c1f927cb12f98d9995ae2f92d3">SHA2_ROTR</a>(x, 18) ^ <a class="el" href="sha256_8hpp.html#a0a0e7e0d135e9feff1da2e46fa556d50">SHA2_SHFR</a>(x,  3))</td></tr>
+<tr class="separator:a9435ee6ad07985796b91077d13eaf7a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc7152c6ff0146084db95994f2852b56"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sha256_8hpp.html#afc7152c6ff0146084db95994f2852b56">SHA256_F4</a>(x)&#160;&#160;&#160;(<a class="el" href="sha256_8hpp.html#a9509f7c1f927cb12f98d9995ae2f92d3">SHA2_ROTR</a>(x, 17) ^ <a class="el" href="sha256_8hpp.html#a9509f7c1f927cb12f98d9995ae2f92d3">SHA2_ROTR</a>(x, 19) ^ <a class="el" href="sha256_8hpp.html#a0a0e7e0d135e9feff1da2e46fa556d50">SHA2_SHFR</a>(x, 10))</td></tr>
+<tr class="separator:afc7152c6ff0146084db95994f2852b56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dc032adc83afe8e265a7941ef11f258"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sha256_8hpp.html#a2dc032adc83afe8e265a7941ef11f258">SHA2_UNPACK32</a>(x,  str)</td></tr>
+<tr class="separator:a2dc032adc83afe8e265a7941ef11f258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7275957ed17d7fe14f0ab6e32c18f9b7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sha256_8hpp.html#a7275957ed17d7fe14f0ab6e32c18f9b7">SHA2_PACK32</a>(str,  x)</td></tr>
+<tr class="separator:a7275957ed17d7fe14f0ab6e32c18f9b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函式</h2></td></tr>
+<tr class="memitem:a53697cb2d3701568ca4241e5f8d36acd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sha256_8hpp.html#a53697cb2d3701568ca4241e5f8d36acd">sha256</a> (std::string input)</td></tr>
+<tr class="separator:a53697cb2d3701568ca4241e5f8d36acd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">定義巨集說明文件</h2>
+<a id="a0ae1b70e2104958a43d1d8f32cb79eb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ae1b70e2104958a43d1d8f32cb79eb6">&#9670;&nbsp;</a></span>SHA256_F1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHA256_F1</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;(<a class="el" href="sha256_8hpp.html#a9509f7c1f927cb12f98d9995ae2f92d3">SHA2_ROTR</a>(x,  2) ^ <a class="el" href="sha256_8hpp.html#a9509f7c1f927cb12f98d9995ae2f92d3">SHA2_ROTR</a>(x, 13) ^ <a class="el" href="sha256_8hpp.html#a9509f7c1f927cb12f98d9995ae2f92d3">SHA2_ROTR</a>(x, 22))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">定義在 <a class="el" href="sha256_8hpp_source.html">sha256.hpp</a> 檔案之第 <a class="el" href="sha256_8hpp_source.html#l00035">35</a> 行.</p>
+
+</div>
+</div>
+<a id="afc002a02aab7533fb0bfe557a25266e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc002a02aab7533fb0bfe557a25266e1">&#9670;&nbsp;</a></span>SHA256_F2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHA256_F2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;(<a class="el" href="sha256_8hpp.html#a9509f7c1f927cb12f98d9995ae2f92d3">SHA2_ROTR</a>(x,  6) ^ <a class="el" href="sha256_8hpp.html#a9509f7c1f927cb12f98d9995ae2f92d3">SHA2_ROTR</a>(x, 11) ^ <a class="el" href="sha256_8hpp.html#a9509f7c1f927cb12f98d9995ae2f92d3">SHA2_ROTR</a>(x, 25))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">定義在 <a class="el" href="sha256_8hpp_source.html">sha256.hpp</a> 檔案之第 <a class="el" href="sha256_8hpp_source.html#l00036">36</a> 行.</p>
+
+</div>
+</div>
+<a id="a9435ee6ad07985796b91077d13eaf7a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9435ee6ad07985796b91077d13eaf7a0">&#9670;&nbsp;</a></span>SHA256_F3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHA256_F3</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;(<a class="el" href="sha256_8hpp.html#a9509f7c1f927cb12f98d9995ae2f92d3">SHA2_ROTR</a>(x,  7) ^ <a class="el" href="sha256_8hpp.html#a9509f7c1f927cb12f98d9995ae2f92d3">SHA2_ROTR</a>(x, 18) ^ <a class="el" href="sha256_8hpp.html#a0a0e7e0d135e9feff1da2e46fa556d50">SHA2_SHFR</a>(x,  3))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">定義在 <a class="el" href="sha256_8hpp_source.html">sha256.hpp</a> 檔案之第 <a class="el" href="sha256_8hpp_source.html#l00037">37</a> 行.</p>
+
+</div>
+</div>
+<a id="afc7152c6ff0146084db95994f2852b56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc7152c6ff0146084db95994f2852b56">&#9670;&nbsp;</a></span>SHA256_F4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHA256_F4</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;(<a class="el" href="sha256_8hpp.html#a9509f7c1f927cb12f98d9995ae2f92d3">SHA2_ROTR</a>(x, 17) ^ <a class="el" href="sha256_8hpp.html#a9509f7c1f927cb12f98d9995ae2f92d3">SHA2_ROTR</a>(x, 19) ^ <a class="el" href="sha256_8hpp.html#a0a0e7e0d135e9feff1da2e46fa556d50">SHA2_SHFR</a>(x, 10))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">定義在 <a class="el" href="sha256_8hpp_source.html">sha256.hpp</a> 檔案之第 <a class="el" href="sha256_8hpp_source.html#l00038">38</a> 行.</p>
+
+</div>
+</div>
+<a id="a1d4a72c3cb3d85b0c82736081042c1a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d4a72c3cb3d85b0c82736081042c1a4">&#9670;&nbsp;</a></span>SHA2_CH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHA2_CH</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">y, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">z&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((x &amp; y) ^ (~x &amp; z))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">定義在 <a class="el" href="sha256_8hpp_source.html">sha256.hpp</a> 檔案之第 <a class="el" href="sha256_8hpp_source.html#l00033">33</a> 行.</p>
+
+</div>
+</div>
+<a id="ae9222f6c22449097806fb1dac2a58107"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9222f6c22449097806fb1dac2a58107">&#9670;&nbsp;</a></span>SHA2_MAJ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHA2_MAJ</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">y, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">z&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((x &amp; y) ^ (x &amp; z) ^ (y &amp; z))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">定義在 <a class="el" href="sha256_8hpp_source.html">sha256.hpp</a> 檔案之第 <a class="el" href="sha256_8hpp_source.html#l00034">34</a> 行.</p>
+
+</div>
+</div>
+<a id="a7275957ed17d7fe14f0ab6e32c18f9b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7275957ed17d7fe14f0ab6e32c18f9b7">&#9670;&nbsp;</a></span>SHA2_PACK32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHA2_PACK32</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">str, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>巨集內容:</b><div class="fragment"><div class="line">{                                             \</div><div class="line">    *(x) =   ((uint32) *((str) + 3)      )    \</div><div class="line">           | ((uint32) *((str) + 2) &lt;&lt;  8)    \</div><div class="line">           | ((uint32) *((str) + 1) &lt;&lt; 16)    \</div><div class="line">           | ((uint32) *((str) + 0) &lt;&lt; 24);   \</div><div class="line">}</div></div><!-- fragment -->
+<p class="definition">定義在 <a class="el" href="sha256_8hpp_source.html">sha256.hpp</a> 檔案之第 <a class="el" href="sha256_8hpp_source.html#l00046">46</a> 行.</p>
+
+</div>
+</div>
+<a id="a0fcefdff5f2609b2c5eb1d0f99214199"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fcefdff5f2609b2c5eb1d0f99214199">&#9670;&nbsp;</a></span>SHA2_ROTL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHA2_ROTL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((x &lt;&lt; n) | (x &gt;&gt; ((sizeof(x) &lt;&lt; 3) - n)))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">定義在 <a class="el" href="sha256_8hpp_source.html">sha256.hpp</a> 檔案之第 <a class="el" href="sha256_8hpp_source.html#l00032">32</a> 行.</p>
+
+</div>
+</div>
+<a id="a9509f7c1f927cb12f98d9995ae2f92d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9509f7c1f927cb12f98d9995ae2f92d3">&#9670;&nbsp;</a></span>SHA2_ROTR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHA2_ROTR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((x &gt;&gt; n) | (x &lt;&lt; ((sizeof(x) &lt;&lt; 3) - n)))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">定義在 <a class="el" href="sha256_8hpp_source.html">sha256.hpp</a> 檔案之第 <a class="el" href="sha256_8hpp_source.html#l00031">31</a> 行.</p>
+
+</div>
+</div>
+<a id="a0a0e7e0d135e9feff1da2e46fa556d50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a0e7e0d135e9feff1da2e46fa556d50">&#9670;&nbsp;</a></span>SHA2_SHFR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHA2_SHFR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(x &gt;&gt; n)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">定義在 <a class="el" href="sha256_8hpp_source.html">sha256.hpp</a> 檔案之第 <a class="el" href="sha256_8hpp_source.html#l00030">30</a> 行.</p>
+
+</div>
+</div>
+<a id="a2dc032adc83afe8e265a7941ef11f258"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dc032adc83afe8e265a7941ef11f258">&#9670;&nbsp;</a></span>SHA2_UNPACK32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHA2_UNPACK32</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">str&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>巨集內容:</b><div class="fragment"><div class="line">{                                             \</div><div class="line">    *((str) + 3) = (uint8) ((x)      );       \</div><div class="line">    *((str) + 2) = (uint8) ((x) &gt;&gt;  8);       \</div><div class="line">    *((str) + 1) = (uint8) ((x) &gt;&gt; 16);       \</div><div class="line">    *((str) + 0) = (uint8) ((x) &gt;&gt; 24);       \</div><div class="line">}</div></div><!-- fragment -->
+<p class="definition">定義在 <a class="el" href="sha256_8hpp_source.html">sha256.hpp</a> 檔案之第 <a class="el" href="sha256_8hpp_source.html#l00039">39</a> 行.</p>
+
+</div>
+</div>
+<h2 class="groupheader">函式說明文件</h2>
+<a id="a53697cb2d3701568ca4241e5f8d36acd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53697cb2d3701568ca4241e5f8d36acd">&#9670;&nbsp;</a></span>sha256()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string sha256 </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>input</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">定義在 <a class="el" href="sha256_8cpp_source.html">sha256.cpp</a> 檔案之第 <a class="el" href="sha256_8cpp_source.html#l00108">108</a> 行.</p>
+<div class="fragment"><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;{</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> digest [ <a class="code" href="classSHA256.html#a62ea97291cac7ce713ac2cf69219851b">SHA256::DIGEST_SIZE</a> ] ;</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    memset ( digest , 0 , <a class="code" href="classSHA256.html#a62ea97291cac7ce713ac2cf69219851b">SHA256::DIGEST_SIZE</a> ) ;</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <a class="code" href="classSHA256.html">SHA256</a> ctx = <a class="code" href="classSHA256.html">SHA256</a> ( ) ;</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    ctx.<a class="code" href="classSHA256.html#a9893152e0b8a75ebed254509dfb1eb4a">init</a> ( ) ;</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    ctx.<a class="code" href="classSHA256.html#a2ab5f18a14b4493671e7d0c4a636b4c6">update</a> ( ( <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* ) input.c_str ( ) , input.length ( ) ) ;</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    ctx.<a class="code" href="classSHA256.html#ae28a257b66be069cc850d49dfe3d48f9">final</a> ( digest ) ;</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">char</span> buf [ 2 * <a class="code" href="classSHA256.html#a62ea97291cac7ce713ac2cf69219851b">SHA256::DIGEST_SIZE</a> + 1 ] ;</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    buf [ 2 * <a class="code" href="classSHA256.html#a62ea97291cac7ce713ac2cf69219851b">SHA256::DIGEST_SIZE</a> ] = 0 ;</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> i = 0 ; i &lt; static_cast &lt; int &gt; ( <a class="code" href="classSHA256.html#a62ea97291cac7ce713ac2cf69219851b">SHA256::DIGEST_SIZE</a> ) ; i ++ )</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        sprintf ( buf + i * 2 , <span class="stringliteral">&quot;%02x&quot;</span> , digest [ i ] ) ;</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">return</span> std::string ( buf ) ;</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div><div class="ttc" id="classSHA256_html_a9893152e0b8a75ebed254509dfb1eb4a"><div class="ttname"><a href="classSHA256.html#a9893152e0b8a75ebed254509dfb1eb4a">SHA256::init</a></div><div class="ttdeci">void init()</div><div class="ttdef"><b>Definition:</b> <a href="sha256_8cpp_source.html#l00051">sha256.cpp:51</a></div></div>
+<div class="ttc" id="classSHA256_html_a2ab5f18a14b4493671e7d0c4a636b4c6"><div class="ttname"><a href="classSHA256.html#a2ab5f18a14b4493671e7d0c4a636b4c6">SHA256::update</a></div><div class="ttdeci">void update(const unsigned char *message, unsigned int len)</div><div class="ttdef"><b>Definition:</b> <a href="sha256_8cpp_source.html#l00065">sha256.cpp:65</a></div></div>
+<div class="ttc" id="classSHA256_html_ae28a257b66be069cc850d49dfe3d48f9"><div class="ttname"><a href="classSHA256.html#ae28a257b66be069cc850d49dfe3d48f9">SHA256::final</a></div><div class="ttdeci">void final(unsigned char *digest)</div><div class="ttdef"><b>Definition:</b> <a href="sha256_8cpp_source.html#l00089">sha256.cpp:89</a></div></div>
+<div class="ttc" id="classSHA256_html_a62ea97291cac7ce713ac2cf69219851b"><div class="ttname"><a href="classSHA256.html#a62ea97291cac7ce713ac2cf69219851b">SHA256::DIGEST_SIZE</a></div><div class="ttdeci">static const unsigned int DIGEST_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="sha256_8hpp_source.html#l00018">sha256.hpp:18</a></div></div>
+<div class="ttc" id="classSHA256_html"><div class="ttname"><a href="classSHA256.html">SHA256</a></div><div class="ttdef"><b>Definition:</b> <a href="sha256_8hpp_source.html#l00005">sha256.hpp:5</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+這是此函數的引用函數圖:</div>
+<div class="dyncontent">
+<div class="center"><img src="sha256_8hpp_a53697cb2d3701568ca4241e5f8d36acd_cgraph.png" border="0" usemap="#sha256_8hpp_a53697cb2d3701568ca4241e5f8d36acd_cgraph" alt=""/></div>
+<map name="sha256_8hpp_a53697cb2d3701568ca4241e5f8d36acd_cgraph" id="sha256_8hpp_a53697cb2d3701568ca4241e5f8d36acd_cgraph">
+<area shape="rect" id="node2" href="classSHA256.html#a9893152e0b8a75ebed254509dfb1eb4a" title="SHA256::init" alt="" coords="129,5,225,32"/>
+<area shape="rect" id="node3" href="classSHA256.html#a2ab5f18a14b4493671e7d0c4a636b4c6" title="SHA256::update" alt="" coords="117,56,236,83"/>
+<area shape="rect" id="node5" href="classSHA256.html#ae28a257b66be069cc850d49dfe3d48f9" title="SHA256::final" alt="" coords="125,107,228,133"/>
+<area shape="rect" id="node4" href="classSHA256.html#a97f83033c1ff262737e763aa89be9487" title="SHA256::transform" alt="" coords="284,81,419,108"/>
+</map>
+</div>
+<div class="dynheader">
+呼叫此函數的函數列表:</div>
+<div class="dyncontent">
+<div class="center"><img src="sha256_8hpp_a53697cb2d3701568ca4241e5f8d36acd_icgraph.png" border="0" usemap="#sha256_8hpp_a53697cb2d3701568ca4241e5f8d36acd_icgraph" alt=""/></div>
+<map name="sha256_8hpp_a53697cb2d3701568ca4241e5f8d36acd_icgraph" id="sha256_8hpp_a53697cb2d3701568ca4241e5f8d36acd_icgraph">
+<area shape="rect" id="node2" href="classBlock.html#a19a2819b3b96f6184716dc40594a21fd" title="Block::_CalculateHash" alt="" coords="117,5,273,32"/>
+<area shape="rect" id="node3" href="classBlock.html#a2fb51ce4e8059541e01efc96255baf01" title="Block::MineBlock" alt="" coords="321,5,445,32"/>
+<area shape="rect" id="node4" href="classBlockchain.html#af74ed9f44071b56fdc09033ce5072719" title="Blockchain::AddBlock" alt="" coords="493,5,644,32"/>
+<area shape="rect" id="node5" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="692,5,743,32"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+產生者: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>
